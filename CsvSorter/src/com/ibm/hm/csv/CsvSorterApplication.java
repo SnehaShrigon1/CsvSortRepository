@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import com.ibm.hm.csv.exceptions.CsvException;
+import com.ibm.hm.csv.messages.ErrorMessages;
 import com.ibm.hm.csv.model.CsvItem;
 
 /**
@@ -47,6 +48,8 @@ public class CsvSorterApplication {
 					for (CsvItem item : sortedCsvItems) {
 						item.print();
 					}
+				} else {
+					System.out.println(ErrorMessages.ERR_MSG_FIEL_DO_NOT_EXIST);
 				}
 			} catch (CsvException e) {
 				System.out.println(e.getMessage());
