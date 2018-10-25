@@ -39,7 +39,7 @@ public class CsvSorter {
 		List<CsvItem> defCsvList = defParser.parse();
 
 		for (CsvItem obj : defCsvList) {
-			String key = obj.getCvsStr();
+			String key = obj.getSortColValue();
 			int index = obj.getLineNumber() - 1;
 			sortOrd.put(key, index);
 
